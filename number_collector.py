@@ -1,30 +1,29 @@
-print("=" * 40)
-print(" Number Collector")
-print("=" * 40)
+# number_collector.py
 
-numbers = []
+from builtins import ValueError
 
 try:
-    entered_number1 = float(input("Enter a number: "))
-    numbers.append(entered_number1)
+    num1 = int(input("Enter number 1: "))
 except ValueError:
-    print("Invalid input. Please enter a valid number.")
+    print("That's not a valid number. Using 0 instead.")
+    num1 = 0
 
 try:
-    entered_number2 = float(input("Enter a number: "))
-    numbers.append(entered_number2)
+    num2 = int(input("Enter number 2: "))
 except ValueError:
-    print("Invalid input. Please enter a valid number.")
+    print("That's not a valid number. Using 0 instead.")
+    num2 = 0
 
 try:
-    entered_number3 = float(input("Enter a number: "))
-    numbers.append(entered_number3)
+    num3 = int(input("Enter number 3: "))
 except ValueError:
-    print("Invalid input. Please enter a valid number.")
+    print("That's not a valid number. Using 0 instead.")
+    num3 = 0
 
-print(f"\nYou entered the numbers: {numbers}")
-print(f"Sum: {sum(numbers):.2f}")
-print(f"Average: {sum(numbers)/len(numbers):.2f}")
+total = num1 + num2 + num3
+average = total / 3
 
-
-
+print()
+print(f"Your numbers: {num1}, {num2}, {num3}")
+print(f"Sum: {total}")
+print(f"Average: {average:.2f}")
